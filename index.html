@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <!-- <span class="circle">
+    <img src="./assets/images/pattern-circle.svg" alt="">
+  </span> -->
+  <div class="lines bg-size">
+  </div>
+  <span class="squig-topRight">
+    <img src="./assets/images/pattern-squiggly-line-top.svg" alt="">
+  </span>
+  <span class="squig-bottomLeft">
+    <img src="./assets/images/pattern-squiggly-line-bottom.svg" alt="">
+  </span> 
+  <!-- Form starts -->
+  <main class="container">
+    <img src="./assets//images/pattern-circle.svg" alt="" class="circle">
+    <img src="./assets/images/logo-full.svg" alt="">
+    <div id="form">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+       <form action="">
+        <div>
+            <h3> Upload Avatar</h3>
+            <label for="file" id="input-file">
+              <input type="file" id="file" accept="image/png, image/jpeg">
+              <div class="image"><img src="./assets/images/icon-upload.svg" alt=""></div>
+              <p id="p">Drag and drop or click to upload</p>
+              <div class="buttons">
+                <button type="button" class="fileBtn" id="removeImage">Remove Image</button>
+                <button type="button" class="fileBtn" id="change">Change Image</button>
+              </div>
+            </label>
+            <span id="fileError" class="error"><img src="./assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</span>
+        </div>
+        <div>
+          <h3>Full Name</h3>
+          <input type="text" id="inputName">
+          <span id="nameError" class="error"><img src="./assets/images/icon-info.svg" alt=""> Please write your name</span>
+  
+        </div>
+        <div>
+          <h3>Email Address</h3>
+          <input type="text" id="inputeEmail" placeholder="example@email.com">
+          <span id="emailError" class="error"><img src="./assets/images/icon-info.svg" alt=""> Please Enter a Valid Email Address.</span>
+        </div>
+        <div>
+          <h3>GitHub Username</h3>
+          <input type="text" id="inputGithub" placeholder="@yourusername">
+          <span id="gitError" class="error"><img src="./assets/images/icon-info.svg" alt=""> Please Write Your Github Username</span>
+        </div>
+        <input type="submit" value="Generate My Ticket" id="btn">
+      </form> 
+    </div>
+    <!-- Form ends -->
+    <!-- Generated tickets starts -->
+    <div class="tecet-contents" id="ticket">
+      <!-- <img class="logo" src="./assets/images/logo-full.svg" alt=""> -->
+      <h1>Congrats,<sapn class="name linearName"  >Full Name elsayed</sapn>! Your ticket is ready.</h1>
+      <div class="text">We've emailed your ticket to <div></div> <span class="email">elsayed@gmail.com</span> and will send updates in the run up to the event.</div>
+      <div class="tect-info">
+        <div>
+          <img src="./assets/images/logo-full.svg" alt="">
+          <p>Jan 31, 2025 / Austin, TX</p>
+        </div>
+        <div class="last">
+          <img src="" id="ticketImg" alt="">
+            <div class="detail">
+              <h3 class="name">elsayed mahmoud</h3>
+              <span><img src="./assets/images/icon-github.svg" alt=""><span id="gitUser">@getuserre dot com</span></span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Generated tickets ends -->
+  </main>
+
+
+
+  
+<script src="script.js"></script>
+</body>
+</html>
