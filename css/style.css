@@ -142,7 +142,7 @@ main {
                     outline: 1px solid var(--Neutral-500) ;
                 }
                 cursor: pointer;
-                border: 1px dotted var(--Neutral-700);
+                border: 4px dotted var(--Neutral-700);
                 width: 100%;
                 margin-top: 5px;
                 margin-bottom: 5px;

@@ -40,17 +40,18 @@ form.addEventListener("submit" , function (e) {
         createTicket()
     }
 })
-inputFile.onchange = function () {
-    let url = URL.createObjectURL(this.files[0]);
-    if(this.files[0].size <= 512000) {
+inputFile.addEventListener("change",upload)
+function upload() {
+    let url = URL.createObjectURL(inputFile.files[0]);
+    if(inputFile.files[0].size <= 512000) {
         localImage = url;
         buttons.style.display = "flex"
         document.getElementById("p").style.display = "none" ;
         uploadInnerImage.style.display = "none" 
         uploadImage.style.backgroundImage = `url(${url})`;
         fileError.style.color = "hsl(252, 6%, 83%)";
-        validImag = true
-
+        validImag = true;
+        inputLable.setAttribute("for","")
     }else {
         uploadInnerImage.style.display = "block" 
         uploadImage.style.backgroundImage = ``;
@@ -74,3 +75,15 @@ function createTicket() {
         document.getElementById("ticketImg").src = localImage
     })
 }
+
+inputLable.ondragover = function (e) {
+    e.preventDefault()
+}
+
+inputLable.ondrop = function (e) {
+    e.preventDefault();
+    inputFile.files = e.dataTransfer.files;
+    upload()
+
+}
+
